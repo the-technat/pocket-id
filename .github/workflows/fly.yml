@@ -18,8 +18,8 @@ jobs:
         uses: superfly/flyctl-actions/setup-flyctl@v1
       - name: Set secrets for app
         run: |
-          flyctl secrets set ENCRYPTION_KEY=${{ secrets.ENCRYPTION_KEY }} --stage
-          flyctl secrets set S3_ACCESS_KEY_ID=${{ secrets.S3_ACCESS_KEY_ID }} --stage
-          flyctl secret sset S3_SECRET_ACCESS_KEY=${{ secrets.S3_SECRET_ACCESS_KEY } --stage
+          flyctl secrets set --stage ENCRYPTION_KEY=${{ secrets.ENCRYPTION_KEY }} 
+          flyctl secrets set --stage S3_ACCESS_KEY_ID="${{ secrets.S3_ACCESS_KEY_ID }}"
+          flyctl secrets set --stage S3_SECRET_ACCESS_KEY="${{ secrets.S3_SECRET_ACCESS_KEY }}"
       - name: Deploy Prod app
         run: flyctl deploy --remote-only
