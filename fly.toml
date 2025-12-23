@@ -18,6 +18,7 @@ primary_region = 'fra'
   S3_BUCKET = 'pocket-id'
   S3_ENDPOINT = 'https://t3.storage.dev'
   S3_REGION = 'auto'
+  KEYS_STORAGE = 'database'
   TRUST_PROXY = 'true'
 
 [[mounts]]
