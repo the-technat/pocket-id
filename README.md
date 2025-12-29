@@ -1,6 +1,24 @@
 # pocket-id
 
-pocket-id.org instance hosted on fly.io
+pocket-id.org instance hosted on fly.io.
+
+No real use-case for this but I lust love OIDC and especially pocket-id.
+
+## Setup
+
+Serverless Container with scale-to-zero capability. Starts whenever a request is made.
+
+## State
+
+User-uploads are stored in the referenced S3 bucket. Everything else is stored in an SQLite database.
+For the sqlite file there is a persistent volume provisioned with automatic snapshots once a day. T
+This will persist even if machines need to replaced
+
+The keys are also stored in the database and encrypted with a provided key. This key should be kept safe in your password manager or similar.
+
+## Backups
+
+Missing: should we ever loose the volume we would loose all state. Need a way to dump the sqlite file to S3 or similar.
 
 ## Deployment
 
