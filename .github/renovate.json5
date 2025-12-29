@@ -1,21 +1,23 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "schedule:earlyMondays"
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    'schedule:earlyMondays',
   ],
-  "lockFileMaintenance": {
-    "enabled": true
+  lockFileMaintenance: {
+    enabled: true,
   },
   customManagers: [
     {
       customType: 'regex',
-      fileMatch: ["^fly\.toml$"],
-      matchStrings: [
-        "image = \'ghcr.io/pocket-id/pocket-id:(?<currentValue>.*?)\'\\n"
+      managerFilePatterns: [
+        '/^fly.toml$/',
       ],
-      packageNameTemplate: "ghcr.io/pocket-id/pocket-id",
-      datasourceTemplate: "docker",
+      matchStrings: [
+        "image = 'ghcr.io/pocket-id/pocket-id:(?<currentValue>.*?)'\\n",
+      ],
+      packageNameTemplate: 'ghcr.io/pocket-id/pocket-id',
+      datasourceTemplate: 'docker',
     },
   ],
 }
