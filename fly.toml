@@ -7,7 +7,7 @@ app = 'pocket-id-old-water-2360'
 primary_region = 'fra'
 
 [build]
-  # renovate: datasource=github-tags depName=pocket-id/pocket-id versioning=semver
+# renovate: datasource=docker depName=ghcr.io/pocket-id/pocket-id versioning=semver
   image = 'ghcr.io/pocket-id/pocket-id:v1.16.0-distroless'
 
 [deploy]
