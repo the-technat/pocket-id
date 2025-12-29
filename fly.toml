@@ -7,7 +7,8 @@ app = 'pocket-id-old-water-2360'
 primary_region = 'fra'
 
 [build]
-  image = 'ghcr.io/pocket-id/pocket-id:v1.16-distroless'
+  # renovate: datasource=github-tags depName=pocket-id/pocket-id versioning=semver
+  image = 'ghcr.io/pocket-id/pocket-id:v1.16.0-distroless'
 
 [deploy]
   strategy = 'rolling'
@@ -19,7 +20,6 @@ primary_region = 'fra'
   S3_ENDPOINT = 'https://t3.storage.dev'
   S3_REGION = 'auto'
   KEYS_STORAGE = 'database'
-  TRUST_PROXY = 'true'
 
 [[mounts]]
   source = 'data'
