@@ -21,5 +21,9 @@ jobs:
           flyctl secrets set --stage ENCRYPTION_KEY=${{ secrets.ENCRYPTION_KEY }} 
           flyctl secrets set --stage S3_ACCESS_KEY_ID="${{ secrets.S3_ACCESS_KEY_ID }}"
           flyctl secrets set --stage S3_SECRET_ACCESS_KEY="${{ secrets.S3_SECRET_ACCESS_KEY }}"
+          flyctl secrets set --stage SMTP_HOST="${{ secrets.SMTP_HOST }}"
+          flyctl secrets set --stage SMTP_PORT="${{ secrets.SMTP_PORT }}"
+          flyctl secrets set --stage SMTP_USER="${{ secrets.SMTP_USER }}"
+          flyctl secrets set --stage SMTP_PASSWORD="${{ secrets.SMTP_PASSWORD }}"
       - name: Deploy Prod app
         run: flyctl deploy --remote-only

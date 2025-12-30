@@ -21,6 +21,8 @@ primary_region = 'fra'
   S3_ENDPOINT = 'https://t3.storage.dev'
   S3_REGION = 'auto'
   KEYS_STORAGE = 'database'
+  SMTP_FROM = 'systems@technat.dev'
+  SMTP_TLS = 'starttls'
 
 [[mounts]]
   source = 'data'
