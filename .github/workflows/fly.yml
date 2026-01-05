@@ -13,7 +13,7 @@ jobs:
     environment: prod
     steps:
       - name: Get code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup flyctl
         uses: superfly/flyctl-actions/setup-flyctl@v1
       - name: Set secrets for app
