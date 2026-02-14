@@ -8,7 +8,7 @@ primary_region = 'fra'
 
 [build]
 # renovate: datasource=docker depName=ghcr.io/pocket-id/pocket-id versioning=semver
-  image = 'ghcr.io/pocket-id/pocket-id:v1.16.0-distroless'
+  image = 'ghcr.io/pocket-id/pocket-id:v2.2.0-distroless'
 
 [deploy]
   strategy = 'rolling'
