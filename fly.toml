@@ -15,8 +15,13 @@ primary_region = 'fra'
 
 [env]
   APP_URL = 'https://auth.technat.dev'
-  TRUST_PROXY = 'true'
   KEYS_STORAGE = 'database'
+  TRUST_PROXY = 'true'
+  ALLOW_USER_SIGNUPS = 'disabled'
+  EMAIL_LOGIN_NOTIFICATION_ENABLED = 'true'
+  EMAIL_ONE_TIME_ACCESS_AS_ADMIN_ENABLED = 'true'
+  EMAIL_API_KEY_EXPIRATION_ENABLED = 'true'
+  EMAIL_VERIFICATION_ENABLED = 'true'
   SMTP_FROM = 'systems@technat.dev'
   SMTP_TLS = 'starttls'
 
